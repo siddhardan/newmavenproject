@@ -28,11 +28,10 @@ kind: Service
 metadata:
  name: demo-app-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
    app: demo-1
   ports:
    - port: 80
      targetPort: 2000
-     nodePort: 30002
 ...
