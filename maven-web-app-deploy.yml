@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: Demo-Application-1
+ name: demo-Application-1
 spec:
  replicas: 2
  strategy: 
@@ -12,12 +12,12 @@ spec:
      app: demo-1
  template:
   metadata:
-   name: Demo-App-Pod-1
+   name: demo-App-Pod-1
    labels:
      app: demo-1	 
   spec: 
     containers:
-    - name: Demo-App-Container-1
+    - name: demo-App-Container-1
       image: siddharadn/app2
       imagePullPolicy: Always
       ports:
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: Demo-App-Service
+ name: demo-App-Service
 spec:
   type: NodePort
   selector:
